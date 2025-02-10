@@ -1,6 +1,25 @@
 # Titanic Survival Prediction with Logistic Regression
 
-## Project Overview
+## Table of Contents
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Project Files](#project-files)
+- [Methodology](#methodology)
+  - [Data Exploration and Preprocessing](#data-exploration-and-preprocessing)
+  - [Feature Engineering](#feature-engineering)
+  - [Model Training](#model-training)
+  - [Model Evaluation](#model-evaluation)
+  - [Feature Importance Analysis](#feature-importance-analysis)
+  - [Predictions on New Unseen Data](#predictions-on-new-unseen-data)
+- [Results and Insights](#results-and-insights)
+- [Limitations and Future Improvements](#limitations-and-future-improvements)
+- [Technologies Used](#technologies-used)
+- [How to Run the Project Locally](#how-to-run-the-project-locally)
+- [Google Colab Notebook](#google-colab-notebook)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
 This project aims to predict whether a passenger survived the Titanic disaster using logistic regression. Leveraging the famous [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic/data) dataset from Kaggle, the project follows a structured machine learning pipeline that includes:
 - Data exploration and preprocessing
 - Feature engineering
@@ -28,22 +47,22 @@ This repository contains the following files:
 
 ## Methodology
 
-### 1. Data Exploration and Preprocessing
+### Data Exploration and Preprocessing
 - **Data Loading:** Imported and examined the dataset to understand its structure.
 - **Missing Values:** Addressed missing values in features such as Age, Embarked, and Cabin.
 - **Data Cleaning:** Removed irrelevant features and handled outliers.
 - **Visualization:** Explored distributions and relationships between key features.
 
-### 2. Feature Engineering
+### Feature Engineering
 - **Feature Selection:** Chose important predictors like Pclass, Sex, Age, SibSp, Parch, Fare, and Embarked.
 - **Encoding:** Applied one-hot encoding to categorical variables (Sex, Embarked).
 - **Normalization:** Scaled numerical features to enhance model performance.
 
-### 3. Model Training
+### Model Training
 - **Data Splitting:** Divided the dataset into training and testing sets.
 - **Logistic Regression:** Implemented logistic regression using both scikit-learn and a custom implementation developed during coursework.
 
-### 4. Model Evaluation
+### Model Evaluation
 - **Performance Metrics:** Evaluated the model using:
   - **Accuracy:** 80%
   - **Precision:** 87%
@@ -51,12 +70,12 @@ This repository contains the following files:
   - **F1 Score:** 87%
 - **Visual Analysis:** Generated a confusion matrix and ROC curve (AUC = 0.93) to assess predictive performance.
 
-### 5. Feature Importance Analysis
+### Feature Importance Analysis
 - **Coefficient Analysis:** Examined the logistic regression coefficients to understand the influence of each feature:
   - **Positive Impact:** Being female (Sex), higher SibSp, and Fare increased the likelihood of survival.
   - **Negative Impact:** Higher age, lower Pclass, and certain Embarked categories were associated with lower survival rates.
 
-### 6. Predictions on New Unseen Data
+### Predictions on New Unseen Data
 - **Application:** Demonstrated the model's ability to predict survival for new passenger data, showcasing its potential for real-world applications.
 
 ## Results and Insights
@@ -84,8 +103,7 @@ To run the project on your local machine, follow these steps:
    git clone https://github.com/your-username/titanic-logistic-regression.git
    cd titanic-logistic-regression
    ```
-   2. **Install the Required Libraries:** 
-   Make sure you have installed all the necessary libraries to run the Jupyter Notebook. You can install them using the following command:
+2. **Install the Required Libraries:**
    ```bash
    pip install pandas numpy scikit-learn matplotlib seaborn jupyter
    ```
@@ -94,7 +112,7 @@ To run the project on your local machine, follow these steps:
     ```bash
     jupyter notebook
     ```
-	Open the `2_Logistic_Regression.ipynb` notebook and run the cells to execute the project.
+    Open the `2_Logistic_Regression.ipynb` notebook and run the cells to execute the project.
 
 ## Google Colab Notebook
 Alternatively, you can run the project in the cloud using Google Colab:
@@ -111,5 +129,4 @@ Alternatively, you can run the project in the cloud using Google Colab:
 - **Course Instructors:** For guidance on model development and evaluation.
 
 ---
-
 This project is part of coursework on **Machine Learning with Logistic Regression** and aims to provide hands-on experience in predictive modeling.
